@@ -1,6 +1,11 @@
 package model
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"gopkg.in/go-playground/validator.v9"
+)
+
+var validate = validator.New()
 
 type (
 	RollPayload struct {
@@ -27,7 +32,7 @@ func (r *RollPayload) UnmarshalJSON(data []byte) error {
 	}
 
 	*r = RollPayload(*rollPayload)
-	return nil
+	return validate.Struct(r)
 }
 
 func (d *Dice) UnmarshalJSON(data []byte) error {
@@ -42,5 +47,5 @@ func (d *Dice) UnmarshalJSON(data []byte) error {
 	}
 
 	*d = Dice(*dice)
-	return nil
+	return validate.Struct(d)
 }
