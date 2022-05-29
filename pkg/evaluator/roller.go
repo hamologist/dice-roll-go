@@ -1,7 +1,7 @@
 package evaluator
 
 import (
-	"github.com/hamologist/dice-roll/pkg/model"
+	"github.com/hamologist/dice-roll-go/pkg/model"
 	"math/rand"
 	"time"
 )
@@ -21,7 +21,7 @@ func EvaluateRoll(rp model.RollPayload) (*model.RollResponse, error) {
 			for rollIndex := 0; rollIndex < diceCount; rollIndex++ {
 				var roll int
 				if die.Sides > 1 {
-					roll = rand.Intn(die.Sides - 1) + 1
+					roll = rand.Intn(die.Sides-1) + 1
 				} else {
 					roll = 1
 				}

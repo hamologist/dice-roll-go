@@ -3,8 +3,8 @@ package router
 import (
 	"encoding/json"
 	"github.com/go-chi/chi"
-	"github.com/hamologist/dice-roll/pkg/evaluator"
-	"github.com/hamologist/dice-roll/pkg/model"
+	"github.com/hamologist/dice-roll-go/pkg/evaluator"
+	"github.com/hamologist/dice-roll-go/pkg/model"
 	"net/http"
 )
 
