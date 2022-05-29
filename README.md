@@ -4,7 +4,7 @@
 ## Installation
 To install and start using dice-roll:
 ```bash
-$ go get github.com/hamologist/dice-roll
+$ go get github.com/hamologist/dice-roll-go
 ```
 
 ## Usage
